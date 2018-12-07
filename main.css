@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+color: #444;
+  font-family: Montserrat;
+  /*background-color: #eee;*/
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.column,
+.columns {
+  margin-left: 4%;
+}
+
+.column:first-child,
+.columns:first-child {
+  margin-left: 0;
+}
+
+.one.column,
+.one.columns                    { width: 4.66666666667%; }
+.two.columns                    { width: 13.3333333333%; }
+.three.columns                  { width: 22%;            }
+.four.columns                   { width: 30.6666666667%; }
+.five.columns                   { width: 39.3333333333%; }
+.six.columns                    { width: 48%;            }
+.seven.columns                  { width: 56.6666666667%; }
+.eight.columns                  { width: 65.3333333333%; }
+.nine.columns                   { width: 74.0%;          }
+.ten.columns                    { width: 82.6666666667%; }
+.eleven.columns                 { width: 91.3333333333%; }
+.twelve.columns                 { width: 100%; margin-left: 0; }
+
+.one-third.column               { width: 30.6666666667%; }
+.two-thirds.column              { width: 65.3333333333%; }
+
+.one-half.column                { width: 48%; }
+
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+.logo {
+  color: #000;
+  font-size: 4em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-left: 1em;
+}
+
+nav {
+  margin-top: 3em;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  text-transform: uppercase;
+  margin-right: 2em;
+}
+
+nav ul li a {
+  color: #aaa;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .1s ease;
+}
+
+a.active {
+  color: black;
+}
+
+nav ul li a:hover {
+  color: black;
+}
+
+.about {
+  line-height: 1.5;
+}
+
+.subtitle {
+  margin-top: 0;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.copyright {
+  margin-top: 3em;
+}
+
+.about-first-paragraph {
+  font-size: 1.25em;
+  margin-bottom: 2em;
+}
+
+.work {
+  margin-bottom: 5em;
+}
+
+.work-description {
+  margin: 0;
+}
+
+.contact-form {
+  margin-top: 3em;
+}
+
+label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+    border: 0;
+    background-color: #eee;
+    margin-bottom: .5em;
+}
+
+label {
+  font-size: .875em;
+  background-color: transparent;
+}
+
+input,
+textarea {
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+input[type="submit"] {
+  font-size: 1em;
+  background-color: #111;
+  display: inline-block;
+  width: auto;
+  padding: .5em 3em;
+  /*float: right;*/
+  transition: all .2s ease;
+}
+
+input[type="submit"]:hover {
+    color: #fff;
+    cursor: pointer;
+    background-color: #444;
+}
