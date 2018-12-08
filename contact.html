@@ -1,61 +1,88 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Yenier Martínez Carrillo - Contact</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Yenier Martínez Carrillo</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  </head>
+  <body>
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="main.css">
-   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-</head>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">about</a></li>
+          <li><a href="work.html">work</a></li>
+          <li><a class="active" href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-<body>
+    <h1 class="logo">Contact</h1>
 
-  <div class="container">
-    <nav>
-      <ul>
-        <li><a href="index.html">about</a></li>
-        <li><a href="work.html">work</a></li>
-        <li><a class="active" href="contact.html">contact</a></li>
-      </ul>
-    </nav>
-  </div>
+    <div class="container">
+      <div class="columns six contact-form">
+        <form id="contact-form" action="https://formspree.io/yeniermc@gmail.com" method="POST">
+          <label for="Email">Email</label>
+          <input name="Email" required="" type="email">
 
-  <h1 class="logo">Contact</h1>
-  <!-- <h2 class="subtitle">Post producer and<br> audiovisual editor</h2> -->
+          <label for="Message">Mensaje</label>
+          <textarea name="Message" rows="10" required=""></textarea>
 
+          <input name="_format" value="plain" type="hidden">
+          <input class="hidden" name="_gotcha" type="text">
+          <input name="_subject" value="Mensaje de yeniermartinez.com" type="hidden">
+          <input name="_cc" value="" type="hidden">
 
-<div class="container">
-  <div class="columns six contact-form">
-    <form id="contact-form" action="//formspree.io/yeniermc@gmail.com" method="post">
-      <label for="Email">Email</label>
-      <input name="Email" required="" type="email">
-      <label for="Message">Mensaje</label>
-      <textarea name="Message" cols="30" rows="10" required=""></textarea>
-      <input name="_format" value="plain" type="hidden">
-      <input class="hidden" name="_gotcha" type="text">
-      <input name="_subject" value="Mensaje para CreActivo" type="hidden">
-      <input name="_cc" value="" type="hidden">
-      <input class="submit" value="Enviar" type="submit">
-    </form>
-  </div>
+          <input class="submit" value="Submit" type="submit">
+        </form>
+      </div>
 
-  <footer class="columns twelve">
-    <p class="copyright">
-     <small>&copy; All rights reserved to Yenier Martínez Carrillo</small>
-    </p>
-  </footer>
+      <footer class="columns twelve">
+        <p class="copyright"><small>&copy; Copyright Yenier Martínez Carrillo</small></p>
+      </footer>
+    </div>
 
-</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+      var $contactForm = $('#contact-form');
+      $contactForm.submit(function(e) {
+        e.preventDefault();
+        var $submit = $('input:submit', $contactForm);
+        var defaultSubmitText = $submit.val();
+        $.ajax({
+          url: 'https://formspree.io/yeniermc@gmail.com',
+          method: 'POST',
+          data: $(this).serialize(),
+          dataType: 'json',
+          beforeSend: function() {
+            $submit.attr('disabled', true).val('Sending message...');
+          },
+          success: function(data) {
+            $submit.val('Message sent!');
+            setTimeout(function() {
+              $submit.attr('disabled', false).val(defaultSubmitText);
+            }, 5000);
+              $contactForm[0].reset();
+          },
+          error: function(err) {
+            $submit.val('An error ocurred');
+            setTimeout(function() {
+              $submit.attr('disabled', false).val(defaultSubmitText);
+            }, 5000);
+          }
+        });
+      });
+    </script>
 
-</body>
-
+  </body>
 </html>
