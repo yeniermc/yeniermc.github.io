@@ -3,9 +3,8 @@
 }
 
 body {
-color: #444;
-  font-family: Montserrat;
-  /*background-color: #eee;*/
+  color: #444;
+  font-family: Montserrat, sans-serif;
 }
 
 img {
@@ -39,30 +38,72 @@ img {
 }
 
 .one.column,
-.one.columns                    { width: 4.66666666667%; }
-.two.columns                    { width: 13.3333333333%; }
-.three.columns                  { width: 22%;            }
-.four.columns                   { width: 30.6666666667%; }
-.five.columns                   { width: 39.3333333333%; }
-.six.columns                    { width: 48%;            }
-.seven.columns                  { width: 56.6666666667%; }
-.eight.columns                  { width: 65.3333333333%; }
-.nine.columns                   { width: 74.0%;          }
-.ten.columns                    { width: 82.6666666667%; }
-.eleven.columns                 { width: 91.3333333333%; }
-.twelve.columns                 { width: 100%; margin-left: 0; }
+.one.columns {
+  width: 4.66666666667%;
+}
 
-.one-third.column               { width: 30.6666666667%; }
-.two-thirds.column              { width: 65.3333333333%; }
+.two.columns {
+  width: 13.3333333333%;
+}
+.three.columns {
+  width: 22%;
+}
 
-.one-half.column                { width: 48%; }
+.four.columns {
+  width: 30.6666666667%;
+}
+
+.five.columns {
+  width: 39.3333333333%;
+}
+
+.six.columns {
+  width: 48%;
+}
+
+.seven.columns {
+  width: 56.6666666667%;
+}
+
+.eight.columns {
+  width: 65.3333333333%;
+}
+
+.nine.columns {
+  width: 74.0%;
+}
+
+.ten.columns {
+  width: 82.6666666667%;
+}
+
+.eleven.columns {
+  width: 91.3333333333%;
+}
+
+.twelve.columns {
+  width: 100%;
+  margin-left: 0;
+}
+
+.one-third.column {
+  width: 30.6666666667%;
+}
+
+.two-thirds.column {
+  width: 65.3333333333%;
+}
+
+.one-half.column {
+  width: 48%;
+}
 
 .container:after,
-.row:after,
-.u-cf {
+.row:after {
   content: "";
   display: table;
-  clear: both; }
+  clear: both;
+}
 
 .logo {
   color: #000;
@@ -138,36 +179,44 @@ nav ul li a:hover {
 label,
 input,
 textarea {
-    display: block;
-    width: 100%;
-    border: 0;
-    background-color: #eee;
-    margin-bottom: .5em;
+  display: block;
+  width: 100%;
+  border: 0;
+  background-color: #eee;
+  margin-bottom: .5em;
 }
 
 label {
   font-size: .875em;
   background-color: transparent;
+  font-weight: 700;
 }
 
 input,
 textarea {
-    padding: 1em;
-    margin-bottom: 1em;
+  padding: 1em;
+  margin-bottom: 1em;
 }
 
 input[type="submit"] {
+  font-family: Montserrat, sans-serif;
   font-size: 1em;
   background-color: #111;
   display: inline-block;
   width: auto;
   padding: .5em 3em;
-  /*float: right;*/
   transition: all .2s ease;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #eee;
 }
 
 input[type="submit"]:hover {
-    color: #fff;
-    cursor: pointer;
-    background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  background-color: #444;
+}
+
+.hidden {
+  display: none;
 }
