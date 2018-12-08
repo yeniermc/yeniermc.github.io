@@ -125,6 +125,10 @@ nav ul li a:hover {
   line-height: 1.5;
 }
 
+.about p {
+  margin-top: 0;
+}
+
 .subtitle {
   margin: 0 0 2em 0;
   font-size: 1.5em;
@@ -198,4 +202,8 @@ input[type="submit"]:hover {
 
 .hidden {
   display: none;
+}
+
+.picc {
+  padding-left: 3em;
 }
