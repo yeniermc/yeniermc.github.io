@@ -87,7 +87,7 @@ h1 em {
 
 .logo {
   color: #000;
-  font-size: 3.75em;
+  font-size: 3.5em;
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -134,7 +134,7 @@ nav ul li a {
 .social ul li {
   display: inline;
   text-transform: uppercase;
-  margin-right: 2em;
+  margin-right: 1em;
 }
 .social ul li:last-of-type {
   margin-right: 0;
