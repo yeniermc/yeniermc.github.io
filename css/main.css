@@ -246,12 +246,14 @@ input[type="submit"]:hover {
     font-size: .75em;
   }
   .social {
-    margin: 1em 0 0 0;
+    margin-top: 2em;
   }
   .social ul {
+    justify-content: center;
+  }
+  .social ul li {
+    flex: 0 0 2.5em !important;
     text-align: center;
-    margin: 0;
-    padding: 0;
   }
   iframe {
     height: 240px;
