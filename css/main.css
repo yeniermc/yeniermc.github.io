@@ -290,6 +290,10 @@ input[type="submit"]:hover {
     grid-column: span 1;
     grid-row: span 1;
   }
+  
+  .work {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 
   #contact-form {
     width: 100%;
